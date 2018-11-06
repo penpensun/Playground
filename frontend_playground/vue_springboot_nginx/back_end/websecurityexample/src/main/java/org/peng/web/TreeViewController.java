@@ -8,10 +8,12 @@ import java.util.Arrays;
 
 @RestController
 public class TreeViewController {
-  @RequestMapping(value="/treeview", method=RequestMethod.GET)
+
+  @RequestMapping(value="/rest/treeview", method=RequestMethod.GET)
   public TreeItems getTreeItems() {
     String[] arr = {"item1","item2","item3","item4","item5"};
-    return new TreeItems(arr);
+    String name = "Test Tree View";
+    return new TreeItems(arr, new ArrayList<>(Arrays.asList(arr)), name);
   }
     
 }

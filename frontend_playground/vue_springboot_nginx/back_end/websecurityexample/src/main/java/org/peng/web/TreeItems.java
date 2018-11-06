@@ -4,10 +4,38 @@ import java.util.Arrays;
 
 import org.springframework.web.bind.annotation.ResponseBody;
 
-@ResponseBody
 public class TreeItems{
-  ArrayList<String> items;
-  public TreeItems(String[] arr){
-    this.items = new ArrayList<>(Arrays.asList(arr));
-  }  
+  private String name;
+  private String[] children;
+  private ArrayList itemList;
+  public TreeItems(String[] arr, ArrayList<String> itemList, String name){
+    this.children  = arr;
+    this.itemList = itemList;
+    this.name = name;
+  }
+
+  public String getName () {
+    return name;
+  }
+
+  public void setName (String name) {
+    this.name = name;
+  }
+
+  public String[] getChildren() {
+    return children;
+  }
+
+  public void setChildren(String[] items){
+    this.children = items;
+  }
+
+  public ArrayList<String> getItemList() {
+    return itemList;
+  }
+
+  public void setItemList(ArrayList<String> itemList){
+    this.itemList = itemList;
+  }
+
 }
