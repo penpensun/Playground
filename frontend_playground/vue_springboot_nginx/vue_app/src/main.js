@@ -9,9 +9,11 @@ Vue.config.productionTip = false
 Vue.prototype.$axios = axios
 
 /* eslint-disable no-new */
+console.log(router.routes)
 new Vue({
   el: '#app',
   router,
-  components: { App },
-  template: '<App/>'
+  // components: { App },
+  // template: '<App/>'\
+  render: h => h(App)
 })
