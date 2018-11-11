@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> c17b532ce89c2e846990bfa5ffdc04699e570cd5
 'use strict'
 // Template version: 1.3.1
 // see http://vuejs-templates.github.io/webpack for documentation.
@@ -7,10 +10,14 @@ const path = require('path')
 
 module.exports = {
   dev: {
+<<<<<<< HEAD
     entry: {
       index: path.resolve(__dirname, 'src/main.js'),
       login: path.resolve(__dirname, 'src/login.js')
     },
+=======
+
+>>>>>>> c17b532ce89c2e846990bfa5ffdc04699e570cd5
     // Paths
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
