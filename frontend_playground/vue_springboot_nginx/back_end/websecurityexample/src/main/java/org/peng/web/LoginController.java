@@ -17,44 +17,37 @@ import java.util.Map;
 
 @RestController
 public class LoginController {
-    @RequestMapping(value = "rest/", method = RequestMethod.GET)
-    public Object index() throws Exception {
-        System.out.println("rest GET endpoint.");
-        if (SecurityUtils.getSubject().isAuthenticated())
-            return "/#index";
-        else return "/#login";
-    }
 
-    @RequestMapping(value = "rest/login", method = RequestMethod.POST)
-    public Object loginRest(@RequestParam(value = "username", required=true) String username,
+    /*@RequestMapping(value = "rest/login", method = RequestMethod.POST)
+    public ResponseMessage loginRest(@RequestParam(value = "username", required=true) String username,
                             @RequestParam(value = "password", required=true) String password, Model model) throws Exception {
         System.out.println("rest/login POST");
         return login(username, password, model);
-    }
+    }*/
 
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String login() {
-        System.out.println("login GET endpoint.");
-        if (SecurityUtils.getSubject().isAuthenticated())
-            return "/#index";
-        else return "/#login";
-    }
-
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public Object login(@RequestParam(value = "username", required=true) String username,
+    @RequestMapping(value = "/rest/login", method = RequestMethod.POST)
+    public ResponseMessage login(@RequestParam(value = "username", required=true) String username,
                         @RequestParam(value = "password", required=true) String password, Model model) throws Exception {
         System.out.println("login POST endpoint.");
         Subject user = SecurityUtils.getSubject();
         UsernamePasswordToken token = new UsernamePasswordToken(username, password);
+        token.setRememberMe(true); // set remember me to true.
         try{
             user.login(token);
-            return "/#index";
+            return new ResponseMessage(true, "Login successful", null);
         } catch(UnknownAccountException e) {
             model.addAttribute("message", "account does not exist");
         } catch(IncorrectCredentialsException e){
             model.addAttribute("message","wrong password");
         }
-        return "/#login";
+        return new ResponseMessage(false, "Login unsuccessful", null);
 
+    }
+
+    @RequestMapping(value="/rest/login_status",method = RequestMethod.GET)
+    public ResponseMessage isLogin() throws Exception {
+        System.out.println("is Login function GET endpoint.");
+        Subject user = SecurityUtils.getSubject();
+        return new ResponseMessage(user.isAuthenticated(), "Current login status", null);
     }
 }

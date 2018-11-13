@@ -6,10 +6,6 @@ const path = require('path')
 
 module.exports = {
   dev: {
-    entry: {
-      index: path.resolve(__dirname, 'src/main.js'),
-      login: path.resolve(__dirname, 'src/login.js')
-    },
     // Paths
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',

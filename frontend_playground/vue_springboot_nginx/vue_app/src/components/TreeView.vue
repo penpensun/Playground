@@ -14,7 +14,6 @@
 
 <script>
 import Item from '@/components/Item.vue'
-const endpoint = 'rest/treeview'
 
 export default {
   name: 'TreeView',
@@ -32,7 +31,10 @@ export default {
   methods: {
     getTreeViewData () {
       console.log('inside get tree view data')
-      this.$axios.get(endpoint).then(response => {
+
+      this.$axios.get('/rest/treeview').then(response => {
+        console.log('the response')
+        console.log(response)
         this.model = response.data
         console.log('the model')
         console.log(this.model)

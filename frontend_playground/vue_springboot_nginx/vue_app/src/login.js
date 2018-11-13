@@ -1,6 +1,7 @@
 import Vue from 'vue'
-import Login from './Login'
+import Login from './Login.vue'
 import router from './router'
+
 /* eslint-disable no-new */
 new Vue({
   el: '#login',

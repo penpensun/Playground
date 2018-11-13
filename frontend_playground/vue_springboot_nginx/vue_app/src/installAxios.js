@@ -12,6 +12,7 @@ function addInterceptor () {
   axios.interceptors.response.use(response => {
     console.log(response)
     console.log('============= interceptors end ============')
+    return response
   })
 }
 

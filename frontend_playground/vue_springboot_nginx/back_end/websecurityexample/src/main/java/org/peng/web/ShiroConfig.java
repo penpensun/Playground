@@ -16,18 +16,19 @@ public class ShiroConfig {
         System.out.println("ShiroConfiguration.shirFilter()");
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
         shiroFilterFactoryBean.setSecurityManager(securityManager);
-        shiroFilterFactoryBean.setLoginUrl("/#login");
-        shiroFilterFactoryBean.setSuccessUrl("/#index");
-        shiroFilterFactoryBean.setUnauthorizedUrl("/403");
+        shiroFilterFactoryBean.setLoginUrl("http://localhost:9000/#/login");
+        shiroFilterFactoryBean.setSuccessUrl("http://localhost:9000/#/index");
+        shiroFilterFactoryBean.setUnauthorizedUrl("http://localhost:9000/#/login");
 
         // Interrupter
         Map<String, String> filterChainDefinitionMap = new LinkedHashMap<String, String>();
-        filterChainDefinitionMap.put("/static/**", "anon");
-        filterChainDefinitionMap.put("/login","anon");
-        filterChainDefinitionMap.put("/logout","logout");
+        filterChainDefinitionMap.put("/rest/login", "anon");
+        filterChainDefinitionMap.put("/rest/login_status","anon");
+        // filterChainDefinitionMap.put("/login","anon");
+        // filterChainDefinitionMap.put("/logout","logout");
         filterChainDefinitionMap.put("/**", "authc");
 
-        //Unauthorized pagg
+        //Unauthorized page
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
         return shiroFilterFactoryBean;
     }
