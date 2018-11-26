@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap Test2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="./static/css/bootstrap.css">
+
+    <style>
+      .jumbotron{
+        background-color:#2e2d88;
+        color:white;
+      }
+      .tab-content {
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        padding:10px;
+      }
+      .nav-tabs {
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <span class="glyphicon glyphicon-film"></span>
+        <a href="#" class="btn btn-primary btn-lg">Trash<span class="glyphicon glyphicon-trash"></span></a>
+        <a href="#" class="btn btn-default btn-lg">Call me <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span></a>
+      </div>
+
+      <div class="well well-sm">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+          deserunt mollit anim id est laborum.
+      </div>
+
+      <img src="ntt-logo.png" id="nttLogo" class="img-responsive img-thumbnail pull-left" alt="Responsive Image"><br>
+
+      <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"><br></div>
+
+      <span class="text-muted">Text muted<br></span>
+      <span class="text-primary">Text primary<br></span>
+      <span class="text-success">Text success<br></span>
+      <span class="text-info">Text info<br></span>
+      <span class="text-warning">Text warning<br></span>
+      <span class="text-danger">Text danger<br></span>
+
+      <span class="bg-muted">Text muted<br></span>
+      <span class="bg-primary">Text primary<br></span>
+      <span class="bg-success">Text success<br></span>
+      <span class="bg-info">Text info<br></span>
+      <span class="bg-warning">Text warning<br></span>
+      <span class="bg-danger">Text danger<br></span>
+
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle btn-lg" type="button" id="dropDownMenu1" data-toggle="dropdown"
+          ar-a-haspopup="true" aria-expanded="true">Favorite Hero <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li class="dropdown-header">Marvel</li>
+          <li><a href="#">Spiderman</a></li>
+          <li><a href="#">Captain America</a></li>
+          <li><a href="#">Iron Man</a></li>
+
+          <li role="separator" class="divider"></li>
+          <li class="dropdown-header">DC</li>
+          <li class="disabled"><a href="#">Superman</a></li>
+          <li><a href="#">Batman</a></li>
+          <li><a href="#">Flash</a></li>
+        </ul>
+
+      </div>
+
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon">Your Name:</span>
+        <input type="text" class="form-control" placeholder="Full Name">
+      </div>
+
+      <div class="input-group input-group-sm">
+          <input type="text" class="form-control" placeholder="Full Name">
+          <span class="input-group-btn">
+            <button class="btn btn-default">Enter</button>
+          </span>
+      </div>
+
+      <div class="row">
+        <div class="input-group input-group-lg">
+          <div class="input-group-btn">
+            <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              User ID
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Google+</a></li>
+              </ul>
+          </div>
+          <input type="text" class="form-control" aria-label="...">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-group">
+          <span class="input-group-addon">
+            <input type="checkbox">
+          </span>
+          <input type="text" class="form-control">
+        </div>
+      </div>
+
+      <div class="container">
+        <ul class="list-inline">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact
+            <span class="caret"></span>
+            <ul class="dropdown-menu">
+                <li><a href="#">Phone</a></li>
+                <li><a href="#">Email</a></li>
+                <li><a href="#">Schedule an appointment</a></li>
+              </ul>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class= "container">
+        <ul class="nav nav-pills nav-stacked">
+          <li class="active"><a href="#">Home</a></li>
+          <li class="active"><a href="#">About</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Phone</a></li>
+              <li><a href="#">Email</a></li>
+              <li><a href="#">Schedule an appointment</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <br><br>
+
+      <div class="container">
+        <ul class="nav nav-pills">
+          <li class="active"><a href="#superman" data-toggle="tab">Superman</a></li>
+          <li ><a href="#batman" data-toggle="tab">Batman</a></li>
+          <li class="dropdown" data-toggle="tab"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Flash <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li class="disabled"><a href="#flash" data-toggle="tab">The Flash</a></li>
+              <li><a href="#kidflash" data-toggle="tab">Kid Flash</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+          <div id="superman" class="tab-pane fade in active"><p>This is the description of superman.</p></div>
+          <div id="batman" class="tab-pane fade"><p>Batman is a fictional superhero</p></div>
+          <div id="flash" class="tab-pane fade"><p>Flash is a fictional superhero</p></div>
+          <div id="kidflash" class="tab-pane fade"><p>Kid Flash is a fictional superhero</p></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <ul class="nav nav-pills">
+            <li class="active"><a data-toggle="tab" href="#superman">Superman</a></li>
+            <li><a data-toggle="tab" href="#batman">Batman</a></li>
+            <!-- Dropdown menu item -->
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Flash
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <!-- Disable a tab -->
+                <li class="disabled"><a data-toggle="tab" href="#flash">The Flash</a></li>
+                <li><a data-toggle="tab" href="#kidflash">Kid Flash</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div id="superman" class="tab-pane fade in active">
+              <p>Superman is a fictional superhero appearing in American comic books published by DC Comics. </p></div>
+            <div id="batman" class="tab-pane fade">
+              <p>Batman is a fictional superhero appearing in American comic books published by DC Comics. </p></div>
+            <div id="flash" class="tab-pane fade">
+              <p>The Flash is a fictional superhero appearing in American comic books published by DC Comics. </p></div>
+            <div id="kidflash" class="tab-pane fade">
+              <p>Kid Flash is a fictional superhero appearing in American comic books published by DC Comics. </p></div>
+          </div>
+      </div>
+
+      <div class="container">
+        <nav class="navbar navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only"></span>
+                <span class="icon-bar">icon-bar</span>
+                <span class="icon-bar">icon-bar2</span>
+                <span class="icon-bar">icon-bar3</span>
+              </button>
+              <a class="pull-lef" href="#">image</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id = "bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">About</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    Contact Us<span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Phone</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Set Appointment</a></li>
+                  </ul>
+                </li>
+              </ul>
+
+              <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn bnt-default">Submit</button>
+              </form>
+            </div>
+
+          </div>
+        </nav>
+      </div>
+
+
+      <br><br><br><br><br><br><br><br><br>
+    </div>
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="./static/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="./static/js/bootstrap.min.js"></script>
+  </body>
+</html>
