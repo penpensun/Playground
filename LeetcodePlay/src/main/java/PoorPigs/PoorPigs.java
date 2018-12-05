@@ -1,3 +1,5 @@
+package PoorPigs;
+
 import java.lang.Math;
 class PoorPigs {
     public int poorPigs(int buckets, int minutesToDie, int minutesToTest) {
